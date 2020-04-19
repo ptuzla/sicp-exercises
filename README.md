@@ -3,5 +3,5 @@ Solutions of the exercises of the book [**_Structure and Interpretation of Compu
 
 <img src="main-banner.gif">
 
-## Runtime Environmen and Editor
+## Runtime Environment and Editor
 I used [DrRacket](https://racket-lang.org/) with the [SICP language package](http://www.neilvandyke.org/racket/sicp/).
