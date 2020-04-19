@@ -1,5 +1,5 @@
 # sicp_exercises
-Solutions of the exercises of the book **Structure and Interpretation of Computer Programs_**
+Solutions of the exercises of the book **_Structure and Interpretation of Computer Programs_**
 
 <img src="main-banner.gif">
 
