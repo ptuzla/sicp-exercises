@@ -1,5 +1,5 @@
 #lang sicp
-(#%require "./exlib1.scm")
+(#%require "./exlib1.rkt")
 
 (define (fast-expt b n)
   (cond ((= n 0) 1)
