@@ -20,3 +20,30 @@
 
 (same-parity 0 1 2 3 4 5 6)
 ; => (0 2 4 6)
+
+
+
+
+(define (same-parity2 . ns)
+  
+  (define (same-p? a b)
+  (= (remainder a 2)
+     (remainder b 2)))
+  
+  (let ((first (car ns)))
+    (define (helper items)
+      (if (null? items)
+          nil
+          (if (same-p? first (car items))
+              (cons (car items)
+                    (helper (cdr items)))
+              (helper (cdr items)))))
+    
+    (cons first (helper (cdr ns)))))
+
+
+(same-parity2 1 2 3 4 5 6 7)
+;(1 3 5 7)
+
+(same-parity2 2 3 4 5 6 7)
+;(2 4 6)
