@@ -31,3 +31,22 @@ x
 
 (deep-reverse x)
 ; => ((4 3) (2 1))
+
+; a more elegant solution
+(define (deep-reverse2 items)
+  (if (not (pair? items))
+      items
+      (map deep-reverse2 (reverse items))))
+
+
+(deep-reverse2 x)
+; => ((4 3) (2 1))
+
+(define y (list (list 5 6) (list 7 8)))
+(define xy (list x y))
+xy
+; => (((1 2) (3 4)) ((5 6) (7 8)))
+; => ((1 2) (3 4))
+
+(deep-reverse2 xy)
+; => (((8 7) (6 5)) ((4 3) (2 1)))
