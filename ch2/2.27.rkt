@@ -17,8 +17,8 @@
       items
       (let ((first (car items)))
         (if (pair? first)
-            (append (deep-reverse (cdr items)) (list (deep-reverse (car items))))
-            (append (deep-reverse (cdr items)) (list (car items)))))))
+            (append (deep-reverse (cdr items)) (list (deep-reverse first)))
+            (append (deep-reverse (cdr items)) (list first))))))
       
 (define x 
   (list (list 1 2) (list 3 4)))
